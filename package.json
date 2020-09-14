@@ -1,0 +1,80 @@
+{
+  "name": "foxuc-im",
+  "version": "1.0.0",
+  "description": "Foxuc IM Management System.",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "dotnet": "dotnet watch run",
+    "dev": "webpack --config=webpack/bin/webpack.config.dev.js",
+    "prod": "webpack --config=webpack/bin/webpack.config.prod.js",
+    "server": "node --max-old-space-size=4096 webpack/bin/webpack.config.server.js"
+  },
+  "author": {
+    "name": "nuintun",
+    "email": "nuintun@qq.com"
+  },
+  "license": "MIT",
+  "browserslist": [
+    "> 1%",
+    "ie >= 11",
+    "Firefox ESR",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "@loadable/component": "^5.13.1",
+    "@types/classnames": "^2.2.10",
+    "@types/loadable__component": "^5.13.0",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/throttle-debounce": "^2.1.0",
+    "antd": "^4.6.4",
+    "classnames": "^2.2.6",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.8.35",
+    "memoize-one": "^5.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "throttle-debounce": "^2.3.0",
+    "whatwg-fetch": "^3.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "case-sensitive-paths-webpack-plugin": "^2.3.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.3.0",
+    "extract-css-chunks-webpack-plugin": "^4.7.5",
+    "file-loader": "^6.1.0",
+    "find-free-ports": "^2.0.3",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-bom-plugin": "^2.0.0",
+    "html-webpack-plugin": "^4.4.1",
+    "koa": "^2.13.0",
+    "koa-compress": "^5.0.1",
+    "koa-webpack": "^6.0.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.1",
+    "node-notifier": "^8.0.0",
+    "optimize-css-assets-webpack-plugin": "5.0.4",
+    "postcss": "^7.0.32",
+    "postcss-loader": "^4.0.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "strip-json-comments": "3.1.1",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.2.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

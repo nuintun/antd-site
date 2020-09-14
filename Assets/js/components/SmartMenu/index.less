@@ -1,0 +1,135 @@
+@import "~antd/es/style/themes/default.less";
+
+@sider-menu-prefix-cls: ~"ui-sider-menu";
+
+.@{sider-menu-prefix-cls} {
+  border-right: none !important;
+  // box-shadow: 1px 0 4px 0 @border-color-split !important;
+
+  &-logo {
+    padding: 0 16px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+    height: @layout-header-height;
+    line-height: @layout-header-height;
+    background: @layout-sider-background;
+
+    a {
+      display: inline-block;
+    }
+
+    img {
+      height: 32px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    h1 {
+      color: white;
+      font-size: 24px;
+      margin: 0 0 0 12px;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: @font-family;
+    }
+  }
+
+  &-sider {
+    z-index: 10;
+    min-height: 100vh;
+    position: relative;
+
+    &.fix-sider-bar {
+      top: 0;
+      left: 0;
+      position: fixed;
+
+      .ant-menu-root {
+        overflow-y: auto;
+        height: calc(100vh - @layout-header-height);
+      }
+
+      .ant-menu-inline {
+        border-right: 0;
+
+        .ant-menu-item,
+        .ant-menu-submenu-title {
+          width: 100%;
+        }
+      }
+    }
+
+    &.ant-layout-sider-collapsed {
+      .@{sider-menu-prefix-cls}-logo {
+        text-align: center;
+      }
+
+      .@{sider-menu-prefix-cls}-logo h1 {
+        display: none;
+      }
+    }
+
+    &.light {
+      background-color: white;
+
+      .@{sider-menu-prefix-cls}-logo {
+        background: white;
+        box-shadow: 0 1px 0 0 @border-color-split;
+
+        h1 {
+          color: black;
+        }
+      }
+
+      .ant-menu-light {
+        border-right-color: transparent;
+      }
+    }
+  }
+
+  &-icon {
+    height: 24px;
+    vertical-align: middle;
+  }
+
+  .ant-menu-item &-icon + span,
+  .ant-menu-submenu-title &-icon + span {
+    font-size: 16px;
+    vertical-align: middle;
+    font-family: @font-family;
+  }
+
+  &.ant-menu-inline-collapsed {
+    .ant-menu-item,
+    .ant-menu-submenu-title {
+      text-align: center;
+      padding: 0 !important;
+
+      .@{sider-menu-prefix-cls}-icon + span {
+        display: none;
+      }
+    }
+
+    .ant-menu-submenu-active,
+    .ant-menu-submenu-selected {
+      background-color: @menu-item-active-bg;
+    }
+  }
+
+  .drawer .drawer-content {
+    background: @layout-sider-background;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+
+    .@{sider-menu-prefix-cls}-sider {
+      box-shadow: none;
+    }
+
+    .@{sider-menu-prefix-cls}-logo {
+      box-shadow: 0 1px 0 0 @border-color-split;
+    }
+  }
+}
