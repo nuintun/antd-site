@@ -16,7 +16,7 @@ const images = path.resolve('Assets/images');
 const useDayjsForAntd = path.resolve('Assets/js/utils/dayjs.ts');
 
 module.exports = {
-  title: '狐聊管理系统',
+  title: 'Antd Site',
   publicPath: '/public/',
   context: path.resolve('Assets'),
   outputPath: path.resolve('wwwroot/public'),

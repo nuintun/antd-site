@@ -1,15 +1,15 @@
 {
-  "name": "foxuc-im",
+  "name": "antd-site",
   "version": "1.0.0",
-  "description": "Foxuc IM Management System.",
+  "description": "Antd site.",
   "engines": {
     "node": ">=8.0.0"
   },
   "scripts": {
-    "dotnet": "dotnet watch run",
+    "start": "node index.js",
     "dev": "webpack --config=webpack/bin/webpack.config.dev.js",
     "prod": "webpack --config=webpack/bin/webpack.config.prod.js",
-    "server": "node --max-old-space-size=4096 webpack/bin/webpack.config.server.js"
+    "watch": "node --max-old-space-size=4096 webpack/bin/webpack.config.server.js"
   },
   "author": {
     "name": "nuintun",
@@ -23,7 +23,7 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "@loadable/component": "^5.13.1",
+    "@loadable/component": "^5.13.2",
     "@types/classnames": "^2.2.10",
     "@types/loadable__component": "^5.13.0",
     "@types/react": "^16.9.49",
@@ -62,6 +62,7 @@
     "html-webpack-plugin": "^4.4.1",
     "koa": "^2.13.0",
     "koa-compress": "^5.0.1",
+    "koa-files": "^1.0.3",
     "koa-webpack": "^6.0.0",
     "less": "^3.12.2",
     "less-loader": "^7.0.1",
