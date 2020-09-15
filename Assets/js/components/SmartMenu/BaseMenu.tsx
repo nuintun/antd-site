@@ -4,17 +4,15 @@ import React from 'react';
 import { Menu } from 'antd';
 import { Location } from 'history';
 import { MenuProps } from 'antd/es/menu';
-import { Link, match } from 'react-router-dom';
 import { MenuItem } from '~js/utils/getRouter';
+import { Link, RouteComponentProps } from 'react-router-dom';
 import { ExpandKeys, getExpandKeysFromRouteMath, getFlatMenuData, isMenuKey } from './SmartMenuUtils';
 
 const { SubMenu, Item }: typeof Menu = Menu;
 
 export interface BaseMenuProps
-  extends Omit<MenuProps, 'mode' | 'openKeys' | 'selectedKeys' | 'inlineIndent' | 'inlineCollapsed'> {
-  match: match;
+  extends RouteComponentProps, Omit<MenuProps, 'mode' | 'openKeys' | 'selectedKeys' | 'inlineIndent' | 'inlineCollapsed'> {
   icon?: string;
-  location: Location;
   collapsed?: boolean;
   menuData: MenuItem[];
   menuItemRender?: (menu: MenuItem & { replace: boolean }) => React.ReactNode;
@@ -65,7 +63,6 @@ export default class BaseMenu extends React.PureComponent<BaseMenuProps, BaseMen
       const cachedOpenKeys = [...state.openKeys.filter(key => isMenuKey(key, flatMenuData)), ...openKeys];
 
       openKeys = collapsed ? [] : cachedOpenKeys;
-      selectedKeys = [...state.selectedKeys, ...selectedKeys];
 
       return { pathname, collapsed, openKeys, menuData, selectedKeys, cachedOpenKeys };
     }

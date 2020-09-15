@@ -1,7 +1,11 @@
 import loadable from '@loadable/component';
 import { Route } from '~js/utils/getRouter';
 
-const router: Route[] = [
+export interface RouteItem extends Route {
+  skipLayout?: boolean;
+}
+
+const router: RouteItem[] = [
   {
     name: '首页',
     path: '/',

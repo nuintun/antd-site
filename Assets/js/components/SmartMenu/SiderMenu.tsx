@@ -24,7 +24,7 @@ export interface SiderMenuProps extends BaseMenuProps, Pick<SiderProps, 'trigger
 export default class SiderMenu extends React.PureComponent<SiderMenuProps> {
   static defaultProps: Pick<SiderMenuProps, 'width' | 'theme' | 'trigger' | 'collapsed' | 'collapsedWidth'> = {
     width: 256,
-    trigger: null,
+    // trigger: null,
     theme: 'light',
     collapsed: false,
     collapsedWidth: 80
@@ -42,7 +42,6 @@ export default class SiderMenu extends React.PureComponent<SiderMenuProps> {
       className,
       collapsed,
       onCollapse,
-      inlineIndent,
       collapsedWidth,
       ...restProps
     }: SiderMenuProps = this.props;
@@ -65,7 +64,7 @@ export default class SiderMenu extends React.PureComponent<SiderMenuProps> {
             <h1>{title}</h1>
           </Link>
         </div>
-        <BaseMenu {...restProps} theme={theme} collapsed={collapsed} className="ui-sider-menu" inlineIndent={inlineIndent} />
+        <BaseMenu {...restProps} theme={theme} collapsed={collapsed} className="ui-sider-menu" />
       </Sider>
     );
   }
