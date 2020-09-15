@@ -13,7 +13,7 @@ app.proxy = true;
 app.use(compress());
 
 // Static
-app.use(serve('client/assets'));
+app.use(serve('wwwroot'));
 
 // Fallback
 app.use(async ctx => {
