@@ -54,7 +54,7 @@ function WithLayoutPage(): React.ReactElement {
           match={match}
           menuData={menus}
           history={history}
-          title="狐聊管理后台"
+          title="Antd Site"
           location={location}
           collapsed={collapsed}
           onCollapse={onCollapse}
