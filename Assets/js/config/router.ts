@@ -73,7 +73,7 @@ const router: RouteItem[] = [
         name: '考试报表',
         hideChildrenInMenu: true,
         href: 'examinations/car',
-        path: 'examinations/:type',
+        path: 'examinations/:type(car|truck)',
         icon: require('~images/menu/dashboard-examinations.svg'),
         component: loadable(() => import('~js/pages/home/index.tsx')),
         children: [
@@ -93,7 +93,7 @@ const router: RouteItem[] = [
         name: '绩效报表',
         hideChildrenInMenu: true,
         href: 'performances/car',
-        path: 'performances/:type',
+        path: 'performances/:type(car|truck)',
         icon: require('~images/menu/dashboard-performances.svg'),
         component: loadable(() => import('~js/pages/home/index.tsx')),
         children: [
